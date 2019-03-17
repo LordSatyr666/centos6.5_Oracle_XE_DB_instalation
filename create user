@@ -1,0 +1,17 @@
+create user petr identified by heslo_moje;
+
+grant CREATE SESSION, ALTER SESSION, CREATE DATABASE LINK, -
+  CREATE MATERIALIZED VIEW, CREATE PROCEDURE, CREATE PUBLIC SYNONYM, -
+  CREATE ROLE, CREATE SEQUENCE, CREATE SYNONYM, CREATE TABLE, - 
+  CREATE TRIGGER, CREATE TYPE, CREATE VIEW, UNLIMITED TABLESPACE -
+  to petr;
+
+
+overeni uzivatele
+
+select * from dba_users where USERNAME = 'PETR'
+
+select * from dba_users
+
+
+connect petr/heslo_moje@XE
